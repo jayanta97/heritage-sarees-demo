@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Heritage Sarees — Demo Homepage</title>
+  <meta name="description" content="Catalog of heritage sarees — demo homepage." />
+  <style>
+    :root{
+      --bg:#f6f7f9;
+      --card:#ffffff;
+      --accent:#7b3f00; /* earthy accent */
+      --muted:#6b7280;
+      --maxw:1100px;
+      --radius:10px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#111;line-height:1.45}
+    .container{max-width:var(--maxw);margin:28px auto;padding:0 18px}
+    header.site-header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .branding{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,#f8efe0,#e8d6c5);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);
+      box-shadow:0 1px 3px rgba(0,0,0,.08);
+    }
+    h1.site-title{font-size:18px;margin:0}
+    .lang{font-size:14px;color:var(--muted)}
+    .hero{
+      margin-top:20px;padding:36px;border-radius:14px;background:
+      linear-gradient(180deg, rgba(123,63,0,0.06), rgba(255,255,255,0.02));
+      display:grid;grid-template-columns:1fr 300px;gap:20px;align-items:center;
+    }
+    .hero h2{margin:0;font-size:28px;color:var(--accent)}
+    .hero p{margin-top:8px;color:var(--muted)}
+    .cta{margin-top:14px;background:var(--accent);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;display:inline-block}
+    .search-row{margin:20px 0;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .search-row input[type="search"]{
+      flex:1;min-width:220px;padding:10px 12px;border-radius:8px;border:1px solid #e5e7eb;background:white;
+    }
+    .filters{display:flex;gap:8px;flex-wrap:wrap}
+    .filter{background:white;padding:8px 10px;border-radius:8px;border:1px solid #ececec;font-size:13px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:12px}
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} .grid{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:600px){ .grid{grid-template-columns:1fr} header.site-header{flex-direction:column;align-items:flex-start} }
+    .card{background:var(--card);border-radius:12px;padding:0;overflow:hidden;box-shadow:0 4px 14px rgba(20,20,20,0.04);display:flex;flex-direction:column}
+    .thumb{height:180px;display:block;background:#eee;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--muted)}
+    .card-body{padding:12px 14px;flex:1;display:flex;flex-direction:column;gap:8px}
+    .meta{font-size:13px;color:var(--muted)}
+    .title{font-weight:600}
+    .badges{display:flex;gap:6px;flex-wrap:wrap}
+    .badge{background:#fff0e6;color:var(--accent);padding:6px 8px;border-radius:999px;font-size:12px;border:1px solid #fde6d3}
+    .read-more{margin-top:auto;text-decoration:none;color:var(--accent);font-weight:600;padding:8px 0;display:inline-block}
+    footer{margin-top:36px;padding:18px 0;color:var(--muted);font-size:13px;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="site-header" role="banner">
+      <div class="branding">
+        <div class="logo" aria-hidden="true">HT</div>
+        <div>
+          <h1 class="site-title">Heritage Textiles — Catalogue</h1>
+          <div class="lang">English ▾ &nbsp; | &nbsp; बहु-भाषा ready</div>
+        </div>
+      </div>
+      <div style="text-align:right">
+        <a href="#" style="font-size:13px;color:var(--muted);text-decoration:none">About</a>
+        &nbsp; • &nbsp;
+        <a href="#" style="font-size:13px;color:var(--muted);text-decoration:none">Contact</a>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <h2 id="hero-title">Documenting India's Heritage Sarees</h2>
+        <p>Curated short histories, technical notes, and high-quality photos. Start by browsing the catalog below.</p>
+        <a class="cta" href="#catalog">Explore sarees</a>
+      </div>
+      <div aria-hidden="true" style="padding:16px;border-radius:10px;background:white;">
+        <div style="height:220px;display:flex;align-items:center;justify-content:center;color:var(--muted)">
+          <svg width="180" height="120" viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="180" height="120" fill="#fff6eb" rx="8"/>
+            <g fill="#7b3f00" font-size="11" font-family="sans-serif">
+              <text x="16" y="28">Demo: Government-style</text>
+              <text x="16" y="48">Heritage Sarees Catalog</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <div class="search-row" role="search" aria-label="Search and filters">
+      <input type="search" placeholder="Search saree name, region, weave, motif..." aria-label="Search saree" id="q">
+      <div class="filters" role="list">
+        <div class="filter">Region ▾</div>
+        <div class="filter">Weave ▾</div>
+        <div class="filter">Era ▾</div>
+        <div class="filter">Project ▾</div>
+      </div>
+    </div>
+
+    <main id="catalog" aria-labelledby="catalog-title">
+      <h3 id="catalog-title" style="margin:10px 0 8px 0;font-size:16px;color:var(--muted)">Saree Catalog — selected projects</h3>
+
+      <section class="grid" aria-label="Saree cards">
+        <!-- Card 1: Maheshwari (links to sample page) -->
+        <article class="card" role="article" aria-labelledby="t1">
+          <a class="thumb" href="saree-maheshwari.html" style="text-decoration:none;color:inherit">
+            <!-- SVG placeholder image -->
+            <svg width="100%" height="100%" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="400" height="200" fill="#fff6eb"/>
+              <text x="200" y="110" text-anchor="middle" fill="#7b3f00" font-size="22" font-family="sans-serif">Maheshwari</text>
+            </svg>
+          </a>
+          <div class="card-body">
+            <div class="title" id="t1">Maheshwari Saree</div>
+            <div class="meta">Origin: Maheshwar, Madhya Pradesh • Technique: Handloom</div>
+            <div class="badges"><span class="badge">Project 4</span><span class="badge">Handloom</span></div>
+            <a class="read-more" href="saree-maheshwari.html">Read more →</a>
+          </div>
+        <article class="card" role="article" aria-labelledby="t2">
+  <a class="thumb" href="baluchari-saree.html">
+    <!-- keep your SVG or thumbnail code here -->
+    ...
+  </a>
+  <div class="card-body">
+    <div class="title" id="t2">Baluchari Saree</div>
+    <div class="meta">Origin: Bishnupur, Bankura, West Bengal • Technique: Silk brocade</div>
+    <div class="badges">
+      <span class="badge">Project 2</span>
+      <span class="badge">Baluchari</span>
+    </div>
+    <a class="read-more" href="baluchari-saree.html">Read more →</a>
+  </div>
+</article>
+
+
+        <article class="card" role="article" aria-labelledby="t3">
+          <div class="thumb"><svg width="100%" height="100%" viewBox="0 0 400 200"><rect width="400" height="200" fill="#f0fff4"/><text x="200" y="110" text-anchor="middle" fill="#13733a" font-size="20">Project 3</text></svg></div>
+          <div class="card-body">
+            <div class="title" id="t3">Project 3 — (Title)</div>
+            <div class="meta">Region & technique</div>
+            <div class="badges"><span class="badge">Project 3</span></div>
+            <a class="read-more" href="#">Read more →</a>
+          </div>
+        </article>
+
+        <article class="card" role="article" aria-labelledby="t4">
+          <div class="thumb"><svg width="100%" height="100%" viewBox="0 0 400 200"><rect width="400" height="200" fill="#fff7f3"/><text x="200" y="110" text-anchor="middle" fill="#b03a2e" font-size="20">Project 8</text></svg></div>
+          <div class="card-body">
+            <div class="title" id="t4">Project 8 — (Title)</div>
+            <div class="meta">Region & technique</div>
+            <div class="badges"><span class="badge">Project 8</span></div>
+            <a class="read-more" href="#">Read more →</a>
+          </div>
+        </article>
+
+        <article class="card" role="article" aria-labelledby="t5">
+          <div class="thumb"><svg width="100%" height="100%" viewBox="0 0 400 200"><rect width="400" height="200" fill="#fff6ff"/><text x="200" y="110" text-anchor="middle" fill="#6a1b9a" font-size="20">Project 9</text></svg></div>
+          <div class="card-body">
+            <div class="title" id="t5">Project 9 — (Title)</div>
+            <div class="meta">Region & technique</div>
+            <div class="badges"><span class="badge">Project 9</span></div>
+            <a class="read-more" href="#">Read more →</a>
+          </div>
+        </article>
+
+        <article class="card" role="article" aria-labelledby="t6">
+          <div class="thumb"><svg width="100%" height="100%" viewBox="0 0 400 200"><rect width="400" height="200" fill="#eef7ff"/><text x="200" y="110" text-anchor="middle" fill="#0b63b3" font-size="20">Project 11</text></svg></div>
+          <div class="card-body">
+            <div class="title" id="t6">Project 11 — (Title)</div>
+            <div class="meta">Region & technique</div>
+            <div class="badges"><span class="badge">Project 11</span></div>
+            <a class="read-more" href="#">Read more →</a>
+          </div>
+        </article>
+
+        <article class="card" role="article" aria-labelledby="t7">
+          <div class="thumb"><svg width="100%" height="100%" viewBox="0 0 400 200"><rect width="400" height="200" fill="#fff9ec"/><text x="200" y="110" text-anchor="middle" fill="#b4882d" font-size="20">Project 12</text></svg></div>
+          <div class="card-body">
+            <div class="title" id="t7">Project 12 — (Title)</div>
+            <div class="meta">Region & technique</div>
+            <div class="badges"><span class="badge">Project 12</span></div>
+            <a class="read-more" href="#">Read more →</a>
+          </div>
+        </article>
+
+      </section>
+    </main>
+
+    <footer>
+      Demo site • Content and project references from your uploaded proposal. • © Demo
+    </footer>
+  </div>
+
+  <script>
+    // tiny demo search behavior (client-side filtering of cards by title)
+    (function(){
+      const q=document.getElementById('q');
+      q.addEventListener('input', ()=> {
+        const term = q.value.toLowerCase().trim();
+        document.querySelectorAll('.card').forEach(card=>{
+          const title = card.querySelector('.title').textContent.toLowerCase();
+          card.style.display = title.includes(term) ? '' : 'none';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
