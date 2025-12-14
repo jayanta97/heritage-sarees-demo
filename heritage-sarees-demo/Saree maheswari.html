@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maheshwari Saree — Heritage Textiles (Demo)</title>
+  <meta name="description" content="Maheshwari saree — history, design, production notes. Demo page." />
+  <style>
+    :root{
+      --bg:#ffffff; --accent:#7b3f00; --muted:#6b7280; --maxw:980px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:#f6f7f9;color:#111}
+    .wrap{max-width:var(--maxw);margin:22px auto;padding:18px}
+    a{color:var(--accent);text-decoration:none}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{width:48px;height:48px;border-radius:8px;background:#fff6eb;display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700}
+    main{margin-top:18px;background:white;padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(15,15,15,0.05)}
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start}
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} }
+    .hero-img{height:320px;border-radius:10px;overflow:hidden;background:#fff6eb;display:flex;align-items:center;justify-content:center}
+    .hero-img img{width:100%;height:100%;object-fit:cover;display:block}
+    .quick{background:#fffef8;border-radius:10px;padding:12px;border:1px solid #f1eadb}
+    .quick h3{margin:0 0 8px 0;color:var(--accent)}
+    .facts{display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--muted)}
+    .section{margin-top:18px}
+    h2{margin:0;color:var(--accent)}
+    p{color:#222}
+    .meta-row{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:14px;margin-top:6px}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+    @media (max-width:900px){ .gallery{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:600px){ .gallery{grid-template-columns:1fr} }
+    .gallery .g{height:120px;border-radius:8px;overflow:hidden;background:#eee;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--muted)}
+    .related{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .pill{background:#fff7f0;border-radius:999px;padding:6px 10px;border:1px solid #fde6d3;color:var(--accent);font-weight:600}
+    footer{margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div style="display:flex;gap:12px;align-items:center">
+        <div class="logo" aria-hidden="true">HT</div>
+        <div>
+          <strong>Heritage Textiles — Maheshwari</strong><br>
+          <small style="color:var(--muted)">Saree details & project documentation</small>
+        </div>
+      </div>
+      <div><a href="index.html">← Back to catalog</a></div>
+    </header>
+
+    <main role="main" aria-labelledby="page-title">
+      <div class="hero" aria-describedby="hero-desc">
+        <div>
+          <div class="hero-img" role="img" aria-label="Maheshwari-hero.jpeg">
+            <!-- Replace svg below with actual <img src="path/to/photo.jpeg" alt="..."> -->
+            <div class="hero-img" role="img" aria-label="Maheshwari saree photo">
+  <img src="images/maheshwari-hero.jpeg"
+       alt="Maheshwari saree from Maheshwar with traditional border"
+       style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+</div>
+
+
+          </div>
+
+          <div class="section" id="history">
+            <h2 id="page-title">Maheshwari Saree</h2>
+            <div class="meta-row" id="hero-desc">
+              <div>Origin: <strong>Maheshwar, Madhya Pradesh</strong></div>
+              <div>Technique: <strong>Handloom</strong></div>
+              <div>Material: <strong>Silk / Silk-Cotton</strong></div>
+            </div>
+
+            <p style="margin-top:12px;color:var(--muted)"><em>One-line summary:</em> A handloom saree from Maheshwar, traditionally woven with locally inspired motifs and a focus on natural fibers and sustainable practices.</p>
+
+            <h3 style="margin-top:14px;color:#333">Historical background</h3>
+            <p>
+              The Maheshwari saree is a regional handloom textile associated with Maheshwar in Madhya Pradesh. Historically valued for its fine weave and elegant borders, the Maheshwari tradition has been the subject of recent documentation and revival efforts to preserve the weave, natural dye practices and artisan livelihoods. The associated Project 4 in the uploaded proposal focuses on documenting these traditions, training weavers in design development, and promoting sustainable production. :contentReference[oaicite:2]{index=2}
+            </p>
+          </div>
+
+          <div class="section" id="design">
+            <h3>Design & motifs</h3>
+            <p>
+              Maheshwari designs often include geometric borders and floral or lattice motifs adapted to the regional aesthetic. Motifs and borders vary across weavers — documenting motif names and meanings is part of the project's aim. (Fill motif names from field images and curator notes.)
+            </p>
+          </div>
+
+          <div class="section" id="production">
+            <h3>Production & technique</h3>
+            <p>
+              Traditional Maheshwari sarees are woven on handlooms using established warp-weft sequences. The project's methodology includes field assessment, CAD-assisted design development, and training artisans to improve design reproducibility and market readiness. :contentReference[oaicite:3]{index=3}
+            </p>
+          </div>
+
+          <div class="section" id="cultural">
+            <h3>Cultural significance</h3>
+            <p>
+              Maheshwari sarees hold local cultural value and contribute to artisan livelihoods. The documentation and revitalization activities aim to strengthen local economies, promote sustainable fibers, and create market linkages for weavers, as described in Project 4. :contentReference[oaicite:4]{index=4}
+            </p>
+          </div>
+
+        </div>
+
+        <aside class="quick" aria-labelledby="quick-title">
+          <h3 id="quick-title">Quick facts</h3>
+          <div class="facts">
+            <div><strong>Origin:</strong> Maheshwar, Madhya Pradesh</div>
+            <div><strong>Technique:</strong> Handloom weaving</div>
+            <div><strong>Materials:</strong> Silk / silk-cotton blends</div>
+            <div><strong>Project ref:</strong> Project 4 (Revitalizing Maheshwari)</div>
+            <div><strong>Typical use:</strong> Cultural & ceremonial wear</div>
+          </div>
+
+          <div style="margin-top:12px">
+            <strong>Project objectives</strong>
+            <ul style="margin:6px 0 0 18px;color:var(--muted)">
+              <li>Documentation & preservation</li>
+              <li>Artisan capacity building</li>
+              <li>Sustainable dye & fiber promotion</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:12px">
+            <strong>Outputs (expected)</strong>
+            <ul style="margin:6px 0 0 18px;color:var(--muted)">
+              <li>Design catalogue & training modules</li>
+              <li>Market linkage recommendations</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+      <div class="section" id="gallery">
+        <h3>Gallery</h3>
+        <div class="gallery" aria-label="Gallery images">
+          <div class="g">Image 1 (replace)</div>
+          <div class="g">Image 2 (replace)</div>
+          <div class="g">Image 3 (replace)</div>
+        </div>
+      </div>
+
+      <div class="section" id="related">
+        <h3>Related items</h3>
+        <div class="related" role="list">
+          <a class="pill" href="#">Other MP Weaves</a>
+          <a class="pill" href="#">Project 4 Overview</a>
+          <a class="pill" href="#">Documentation & References</a>
+        </div>
+      </div>
+
+      <div class="section" id="sources" style="margin-top:18px;font-size:14px;color:var(--muted)">
+        <strong>Sources & credits</strong>
+        <p style="margin-top:6px">Content on this page is based on the Project 4 documentation in the uploaded SHRI proposal. See project details in the proposal for full methodology and expected outputs. :contentReference[oaicite:5]{index=5}</p>
+      </div>
+    </main>
+
+    <footer>
+      Demo page • Content partially populated from your uploaded proposal. :contentReference[oaicite:6]{index=6}
+    </footer>
+  </div>
+</body>
+</html>
